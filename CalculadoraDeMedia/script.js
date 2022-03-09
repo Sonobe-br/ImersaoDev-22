@@ -1,26 +1,16 @@
-let name = "Daniel";
-let notaDoPrimeiroBimestre = 9.256;
-let notaDoSegundoBimestre = 7.323;
-let notaDoTerceiroBimestre = 4.445;
-let notaDoQuartoBimestre = 2.878;
+function Converter() {
 
-let notaFinal = (notaDoPrimeiroBimestre + notaDoSegundoBimestre + notaDoTerceiroBimestre 
-    + notaDoQuartoBimestre) / 4;
+    let valorElemento = document.getElementById("valor");
+    let valor = valorElemento.value;
+    let valorEmDolarNumerico = parseFloat(valor);
+    //console.log ("Moeda Convertida");
 
-let notaFixada = notaFinal.toFixed(1);
+    let valorEmReal = (valorEmDolarNumerico * 5).toFixed(2);
+    console.log(valorEmReal);
 
+    let elementoIdConvertido = document.getElementById("valorConvertido");
+    let valorConvertido = 'O resultado do produto em real é ' + valorEmReal;
+    
+    elementoIdConvertido.innerHTML = valorConvertido; 
 
-    if (notaFixada > 7.0) {
-        console.log("A sua nota foi " + notaFixada + " e você foi aprovado");
-        
-    } else {
-        console.log("Estude mais! A sua nota foi " + notaFixada + " e você foi reprovado")
-      
-    };   
-      
-//console.log(notaFixada);
-      
-
-
-
-
+}
